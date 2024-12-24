@@ -1,4 +1,4 @@
-module github.com/nurmanhabib/go-proto-bank
+module github.com/nurmanhabib/proto-bank
 
 go 1.23.4
 

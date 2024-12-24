@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/nurmanhabib/go-proto-bank/pb/user"
+	"github.com/nurmanhabib/proto-bank/pb/user"
 )
 
 func main() {
-	req := &user.HelloRequest{Name: "World"}
+	req := &user.SaveUserRequest{Name: "World"}
 	fmt.Println(req)
 }

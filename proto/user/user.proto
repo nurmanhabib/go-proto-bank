@@ -2,18 +2,49 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "github.com/nurmanhabib/go-proto-bank/pb/user";
+option go_package = "github.com/nurmanhabib/proto-bank/pb/user";
 
-message HelloRequest {
+message SaveUserRequest {
   string name = 1;
+  string email = 2;
+  int32 age = 3;
 }
 
-message HelloReply {
-  string message = 1;
-  int32 age = 2;
+message UpdateUserRequest {
+  string name = 1;
+  string email = 2;
+  int32 age = 3;
 }
+
+message ListsUserRequest {
+  string search = 1;
+}
+
+message DetailUserRequest {
+  string id = 1;
+}
+
+message DeleteUserRequest {
+  string id = 1;
+}
+
+message UserLists {
+  repeated UserDetail users = 1;
+}
+
+message UserDetail {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  int32 age = 4;
+}
+
+message UserDeleted {}
 
 service UserService {
-  rpc SayHello (HelloRequest) returns (HelloReply);
-  rpc SayHello23 (HelloRequest) returns (HelloReply);
+  rpc SaveUser (SaveUserRequest) returns (UserDetail);
+  rpc UpdateUser (UpdateUserRequest) returns (UserDetail);
+  rpc ListsUser (ListsUserRequest) returns (UserLists);
+  rpc DetailUser (DetailUserRequest) returns (UserDetail);
+  rpc DeleteUser (DeleteUserRequest) returns (UserDeleted);
 }

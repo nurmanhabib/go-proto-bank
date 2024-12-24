@@ -44,7 +44,7 @@ The following Makefile commands are available to simplify your workflow:
    Run the following command to generate Go code from your .proto files:
 
 ```bash
-make proto
+make all
 ```
 
 This will:
