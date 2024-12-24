@@ -10,6 +10,7 @@ message HelloRequest {
 
 message HelloReply {
   string message = 1;
+  int32 age = 2;
 }
 
 service UserService {
