@@ -1,8 +1,8 @@
 package main
 
 import (
-	"bitbucket.org/nurmanhabib/proto-bank/pb/user"
 	"fmt"
+	"github.com/nurmanhabib/go-proto-bank/pb/user"
 )
 
 func main() {

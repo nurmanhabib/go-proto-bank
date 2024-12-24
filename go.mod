@@ -1,4 +1,4 @@
-module bitbucket.org/nurmanhabib/proto-bank
+module github.com/nurmanhabib/go-proto-bank
 
 go 1.23.4
 

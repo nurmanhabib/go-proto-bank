@@ -2,4 +2,4 @@ syntax = "proto3";
 
 package payment;
 
-option go_package = "bitbucket.org/nurmanhabib/proto-bank/pb/payment";
+option go_package = "github.com/nurmanhabib/go-proto-bank/pb/payment";
